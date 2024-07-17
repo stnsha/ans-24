@@ -16,7 +16,10 @@
     },
     "dependencies": {
         "alpinejs": "^3.14.1",
+        "flatpickr": "^4.6.13",
         "postcss-nesting": "^12.1.5",
-        "preline": "^2.3.0"
+        "preline": "^2.3.0",
+        "slim-select": "^2.8.2",
+        "tom-select": "^2.3.1"
     }
 }

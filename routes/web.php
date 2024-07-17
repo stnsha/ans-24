@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ReferencesController;
 use App\Http\Controllers\UserAuthController;
 use Illuminate\Support\Facades\Route;
 
@@ -19,4 +20,6 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
+
+    Route::resource('references', ReferencesController::class);
 });
