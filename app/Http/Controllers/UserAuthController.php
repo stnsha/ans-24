@@ -27,7 +27,7 @@ class UserAuthController extends Controller
 
     public function login()
     {
-        return view('welcome');
+        return view('auth.login');
         // $loginUserData = $request->validate([
         //     'email' => 'required|string|email',
         //     'password' => 'required|min:8'

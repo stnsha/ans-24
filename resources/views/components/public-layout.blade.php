@@ -55,7 +55,7 @@
             </div>
         </nav>
     </header>
-    <div class="max-w-sm mx-auto my-auto">
+    <div class="max-w-sm mx-auto my-auto md:max-w-xl">
         {{ $slot }}
     </div>
 

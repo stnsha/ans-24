@@ -1,26 +1,40 @@
 <x-public-layout>
-    <div class="flex flex-col bg-white border-0 rounded-[15px] shadow-lg py-8 md:max-w-auto">
-        <div class="flex justify-center ">
-            <img src="{{ asset('img/logo.svg') }}" alt="" class="w-[95px]">
+    <div class="flex flex-col mb-12">
+        <span class="font-mono text-lg font-normal pb-4">Hi, I'm</span>
+        <div class="flex justify-center items-center">
+            <span class="font-mono text-5xl text-center md:text-9xl font-normal pb-4">{ ans }</span>
         </div>
-        <div class="flex flex-col mt-6 mx-14">
-            <div class="flex flex-row items-center">
-                <div class="flex pr-2.5">
-                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M18.5393 5.20844C18.0832 5.20844 17.6611 4.91781 17.5218 4.46781C17.1253 3.18239 16.3406 2.41156 15.0521 2.04177C14.4886 1.88031 14.1654 1.30114 14.3302 0.74906C14.4961 0.196977 15.0882 -0.118648 15.6496 0.0417687C17.609 0.604269 18.9603 1.92614 19.5588 3.86573C19.7289 4.41677 19.41 4.99802 18.8486 5.16469C18.7466 5.19489 18.6424 5.20948 18.5403 5.20948L18.5393 5.20844ZM5.73877 23.2095C5.90356 22.6574 5.58035 22.0793 5.01688 21.9168C3.72832 21.547 2.94264 20.7761 2.54715 19.4907C2.37704 18.9397 1.78379 18.6314 1.22138 18.7949C0.658965 18.9616 0.341079 19.5428 0.511186 20.0939C1.10868 22.0334 2.46103 23.3553 4.42044 23.9178C4.52038 23.9459 4.62032 23.9605 4.71919 23.9605C5.17954 23.9605 5.60374 23.6647 5.73877 23.2095ZM24.8725 7.29177C24.8725 6.14073 23.921 5.20844 22.7462 5.20844C21.5714 5.20844 20.6199 6.14073 20.6199 7.29177V10.2636L11.6478 1.49906C11.0248 0.888644 10.0159 0.888644 9.39286 1.49906C8.76985 2.10844 8.76985 3.09906 9.39286 3.70844L15.3136 9.49177C15.5709 9.74489 15.5709 10.1553 15.3136 10.4074C15.0563 10.6595 14.6353 10.6605 14.377 10.4074C14.3663 10.397 6.33308 2.54073 6.33308 2.54073C5.71006 1.93031 4.70112 1.93031 4.0781 2.54073C3.45509 3.1501 3.45509 4.14073 4.0781 4.7501L12.1284 12.6136C12.3857 12.8668 12.3857 13.2772 12.1284 13.5293C11.87 13.7824 11.4501 13.7824 11.1917 13.5293C11.1864 13.5241 4.20781 6.70635 4.20781 6.70635C3.58479 6.09594 2.57585 6.09594 1.95284 6.70635C1.32982 7.31573 1.32982 8.30635 1.95284 8.91573C1.95284 8.91573 8.93889 15.7303 8.94208 15.7334C9.20043 15.9866 9.20043 16.398 8.94208 16.6511C8.68373 16.9043 8.26591 16.9043 8.00756 16.6511L4.20887 12.9553C3.58692 12.3449 2.57691 12.3449 1.9539 12.9553C1.33089 13.5657 1.33089 14.5543 1.9539 15.1647L9.32057 22.3564C11.1173 24.1168 13.4786 24.997 15.8388 24.997C18.1991 24.997 20.5603 24.1168 22.3571 22.3564C23.9816 20.7657 24.8757 18.6491 24.8757 16.3991V7.29177H24.8725Z"
-                            fill="#F8D51E" />
-                    </svg>
+        <span class="font-mono text-lg font-normal pb-4">from Malaysia and I'm a PHP web developer.</span>
+        <div class="flex justify-center items-center my-8">
+            <span class="font-inter text-xs font-normal">learn more about me <a href=""
+                    class="underline font-semibold">here</a> or download my resume</span>
+        </div>
+        <div class="flex flex-row">
+            <div class="mr-4">
+                <img class="border-0 rounded-full w-24" src="{{ asset('img/me.jpg') }}" alt="">
+            </div>
+            <div class="flex flex-col w-full border border-[#BAA6A6] rounded-b-lg rounded-r-lg py-10 px-7">
+                <div class="flex flex-row">
+                    <span class="font-inter text-xs font-semibold pr-4">Siti Anasuha</span>
+                    <span class="font-inter text-xs font-normal text-[#6D5F5F]">20:00</span>
                 </div>
-                <div class="flex flex-col">
-                    <span class="text-xs font-medium">Welcome back!</span>
-                    <span class="text-xs font-normal">You'll be logged in as an admin.</span>
+                <div
+                    class="flex flex-row justify-between items-center bg-[#D9D9D9] border-0 rounded-lg mt-6 py-3.5 px-6">
+                    <div class="flex flex-col">
+                        <div class="flex flex-row justify-center items-center">
+                            <img class="w-10 mr-2.5" src="{{ asset('img/pdf.png') }}" alt="">
+                            <span class="font-inter text-xs font-semibold">siti_anasuha_resume_2024.pdf</span>
+                        </div>
+                        <span class="font-inter text-xs font-normal text-[#6D5F5F] pt-3">4 pages • 18 MB • PDF</span>
+                    </div>
+                    <div class="flex justify-center items-center">
+                        <a href=""><img class="w-8" src="{{ asset('img/file.png') }}" alt=""></a>
+                    </div>
                 </div>
             </div>
-            <div class="mt-4">
-                @livewire('forms.login')
-            </div>
+        </div>
+        <div class="flex justify-end items-center mt-3.5">
+            <span class="font-inter text-xs font-medium">psst! my resume is ats friendly 😜</span>
         </div>
     </div>
 </x-public-layout>

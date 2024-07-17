@@ -15,11 +15,9 @@
         </div>
         <div class="flex flex-col mb-4">
             <div x-data="{ show: false }" class="flex flex-col mb-4">
-                <span class="text-xs font-normal">Your Password</span>
-                <div class="relative">
-                    <input :type="show ? 'text' : 'password'" wire:model="password" id="password"
-                        class="bg-[#F7F0F0] border-0 rounded-[15px] shadow-md mt-2 py-2 pr-10 pl-4 focus:outline-[#D69595]">
-                    <button type="button" @click="show = !show" class="absolute top-0 end-0 px-3 py-5 rounded-e-md">
+                <div class="flex flex-row relative">
+                    <span class="text-xs font-normal pr-2">Your Password</span>
+                    <button type="button" @click="show = !show" class="rounded-e-md">
                         <svg x-show="!show" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                             stroke-width="1.5" stroke="#D69595" class="w-4 h-4">
                             <path stroke-linecap="round" stroke-linejoin="round"
@@ -33,6 +31,9 @@
                         </svg>
                     </button>
                 </div>
+                <input :type="show ? 'text' : 'password'" wire:model="password" id="password"
+                    class="bg-[#F7F0F0] border-0 rounded-[15px] shadow-md mt-2 py-2 pr-10 pl-4 focus:outline-[#D69595]">
+
                 @error('password')
                     <span class="text-red-500 text-xs pt-2">{{ $message }}</span>
                 @enderror
