@@ -2,8 +2,8 @@
     <div class="flex flex-col justify-start">
         <span class="font-medium text-sm items-center mb-4">Welcome back,
             {{ auth()->user()->name }}!</span>
-        <div class="flex flex-row justify-between items-start">
-            <div class="flex flex-col justify-start bg-[#F7F0F0] border-0 rounded-lg py-4 px-3 mr-4 w-full">
+        <div class="flex flex-col md:flex-row justify-between items-start mb-4">
+            <div class="flex flex-col justify-start bg-[#F7F0F0] border-0 rounded-lg py-4 px-3 mr-4 w-full mb-2 md:mb-0">
                 <div class="flex flex-row justify-start items-center">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="w-6 h-6">
@@ -32,11 +32,12 @@
                         <span class="font-medium text-xs">10 days left</span>
                     </div>
                 </div>
-                <div class="flex justify-end pl-3 pt-1.5">
+                <div class="flex justify-end px-3 pt-1.5">
                     <a href="" class="font-normal text-xs text-[#D69595] hover:underline">Edit details</a>
                 </div>
             </div>
-            <div class="flex flex-col justify-start bg-[#F7F0F0] border-0 rounded-lg py-4 px-3 mr-4 w-full">
+            <div
+                class="flex flex-col justify-start bg-[#F7F0F0] border-0 rounded-lg py-4 px-3 mr-4 w-full mb-2 md:mb-0">
                 <div class="flex flex-row justify-start items-center">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="w-6 h-6">
@@ -68,7 +69,8 @@
                     <a href="" class="font-normal text-xs text-[#D69595] hover:underline">Edit details</a>
                 </div>
             </div>
-            <div class="flex flex-col justify-start bg-[#F7F0F0] border-0 rounded-lg py-4 px-3 mr-4 w-full">
+            <div
+                class="flex flex-col justify-start bg-[#F7F0F0] border-0 rounded-lg py-4 px-3 mr-4 w-full mb-2 md:mb-0">
                 <div class="flex flex-row justify-start items-center">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="w-6 h-6">
@@ -102,6 +104,71 @@
                 </div>
             </div>
 
+        </div>
+        <div class="flex flex-col md:flex-row justify-between items-start mb-4">
+            <div
+                class="flex flex-col justify-start bg-[#F7F0F0] border-0 rounded-lg py-4 px-3 mr-4 w-full mb-2 md:mb-0">
+                <div class="flex flex-row justify-start items-center mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0" />
+                    </svg>
+                    <span class="font-semibold text-sm pl-3">Important Dates</span>
+                </div>
+                <div
+                    class="flex flex-row justify-between items-center py-4 px-3 bg-white border-l-8 border-l-red-500 rounded-lg mb-4">
+                    <div class="flex flex-col">
+                        <div class="flex flex-row mb-2">
+                            <span
+                                class="justify-center inline-flex items-center gap-x-1.5 py-0.5 px-3 rounded-full font-normal text-[10px] bg-green-100 text-green-800 mr-1.5">Reception</span>
+                            <span
+                                class="inline-flex items-center gap-x-1.5 py-0.5 px-3 rounded-full text-[10px] font-medium bg-red-100 text-red-800">
+                                <span class="size-1.5 inline-block rounded-full bg-red-800"></span>
+                                High Priority
+                            </span>
+                        </div>
+                        <span class="font-semibold text-xs pb-1.5">Payment 3 of Rumah Abang Jamil</span>
+                        <span class="font-normal text-xs pb-1.5">RM 4,500.00</span>
+                    </div>
+                    <div class="flex flex-col items-end">
+                        <span class="font-medium text-slate-700 text-sm pb-0.5">20 April 2025</span>
+                        <span class="font-normal text-red-500 text-xs pb-0.5 italic">10 days left</span>
+                    </div>
+                </div>
+                <div
+                    class="flex flex-row justify-between items-center py-4 px-3 bg-white border-l-8 border-l-yellow-500 rounded-lg mb-4">
+                    <div class="flex flex-col">
+                        <div class="flex flex-row mb-2">
+                            <span
+                                class="justify-center inline-flex items-center gap-x-1.5 py-0.5 px-3 rounded-full font-normal text-[10px] bg-green-100 text-green-800 mr-1.5">Reception</span>
+                            <span
+                                class="inline-flex items-center gap-x-1.5 py-0.5 px-3 rounded-full text-[10px] font-medium bg-yellow-100 text-yellow-800">
+                                <span class="size-1.5 inline-block rounded-full bg-yellow-800"></span>
+                                Neutral
+                            </span>
+                        </div>
+                        <span class="font-semibold text-xs pb-1.5">Groom Stylist</span>
+                        <span class="font-normal text-xs pb-1.5">RM 250.00</span>
+                    </div>
+                    <div class="flex flex-col items-end">
+                        <span class="font-medium text-slate-700 text-sm pb-0.5">31 May 2025</span>
+                        <span class="font-normal text-yellow-500 text-xs pb-0.5 italic">45 days left</span>
+                    </div>
+                </div>
+
+            </div>
+            <div
+                class="flex flex-col justify-start bg-[#F7F0F0] border-0 rounded-lg py-4 px-3 mr-4 w-full mb-2 md:mb-0">
+                <div class="flex flex-row justify-start items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0ZM3.75 12h.007v.008H3.75V12Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm-.375 5.25h.007v.008H3.75v-.008Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+                    </svg>
+                    <span class="font-semibold text-sm pl-3">To-do List</span>
+                </div>
+            </div>
         </div>
     </div>
 </x-app-layout>
