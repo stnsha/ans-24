@@ -16,7 +16,7 @@
 <body class="font-inter antialiased bg-[#F7F0F0]">
     <header class="flex-wrap justify-center md:justify-center md:flex md:flex-nowrap z-50 w-full text-sm py-4 mb-8">
         <nav
-            class="mt-6 relative max-w-auto justify-between bg-[#D69595] border-0 rounded-[36px] mx-2 py-3 px-4 md:flex md:items-center md:justify-center md:py-3 md:px-6 lg:px-8 xl:mx-auto">
+            class="mt-2.5 relative max-w-auto justify-between bg-[#D69595] border-0 rounded-[36px] mx-2 py-3 px-4 md:flex md:items-center md:justify-center md:py-3 md:px-6 lg:px-8 xl:mx-auto">
             <div class="flex items-center justify-between">
                 <img src="{{ asset('img/logo.svg') }}" alt="" class="w-[95px] mx-8 block md:hidden">
                 <div class="md:hidden">
