@@ -1,6 +1,7 @@
 import Alpine from 'alpinejs'
 import 'preline'
 import './../../vendor/power-components/livewire-powergrid/dist/tailwind.css'
+import './../../vendor/power-components/livewire-powergrid/dist/powergrid.js'
 import flatpickr from "flatpickr"; 
 import TomSelect from "tom-select";
 import SlimSelect from 'slim-select'

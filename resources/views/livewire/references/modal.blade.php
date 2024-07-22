@@ -20,27 +20,47 @@
                         </svg>
                     </button>
                 </div>
-                <div class="p-4 overflow-y-auto">
-                    <label for="input-label" class="block text-sm font-medium mb-2">Description</label>
-                    <input type="email" id="input-label"
-                        class="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-[#D69595] focus:ring-[#D69595]"
-                        placeholder="you@site.com" autofocus="">
-                </div>
-                <div class="p-4 overflow-y-auto">
-                    <label for="input-label" class="block text-sm font-medium mb-2">Category</label>
-                   <select name="" id=""></select>
-                </div>
-                <div class="flex justify-end items-center gap-x-2 py-3 px-4 border-t">
-                    <button type="button"
-                        class="py-2 px-3 inline-flex items-center gap-x-2 text-xs font-normal rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none"
-                        data-hs-overlay="#hs-focus-management-modal">
-                        Close
-                    </button>
-                    <button type="button"
-                        class="py-2 px-3 inline-flex items-center gap-x-2 text-xs font-normal rounded-lg border border-transparent bg-[#D69595] text-rose-950 hover:text-[#F7F0F0] disabled:opacity-50 disabled:pointer-events-none">
-                        Save changes
-                    </button>
-                </div>
+                <form wire:submit.prevent="submit">
+                    <div class="p-4 overflow-y-auto">
+                        <label for="input-label" class="block text-sm font-medium mb-2">Description <span
+                                class="text-red-500">*</span></label>
+                        <input type="text" id="input-label" wire:model="description"
+                            class="py-3 px-4 block w-full bg-slate-50 border-gray-500 rounded-lg text-sm focus:border-[#D69595] focus:ring-[#D69595]"
+                            autofocus="">
+                        <div>
+                            @error('description')
+                                <span class="error">{{ $message }}</span>
+                            @enderror
+                        </div>
+                    </div>
+                    <div class="p-4 overflow-y-auto">
+                        <label for="input-label" class="block text-sm font-medium mb-2">Category <span
+                                class="text-red-500">*</span></label>
+                        <select wire:model="parent_id" id="parent_id"
+                            class="py-2 px-3 pe-9 block w-full bg-slate-50 border-gray-500 rounded-lg text-sm focus:border-[#D69595] focus:ring-[#D69595] disabled:opacity-50 disabled:pointer-events-none">
+                            <option value="0" selected>I'm creating a new category</option>
+                            @foreach ($categories as $cat)
+                                <option value="{{ $cat->id }}">{{ $cat->description }}</option>
+                            @endforeach
+                        </select>
+                        <div>
+                            @error('parent_id')
+                                <span class="error">{{ $message }}</span>
+                            @enderror
+                        </div>
+                    </div>
+                    <div class="flex justify-end items-center gap-x-2 py-3 px-4 border-t">
+                        <button type="button"
+                            class="py-2 px-3 inline-flex items-center gap-x-2 text-xs font-normal rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none"
+                            data-hs-overlay="#hs-focus-management-modal">
+                            Close
+                        </button>
+                        <button type="submit"
+                            class="py-2 px-3 inline-flex items-center gap-x-2 text-xs font-normal rounded-lg border border-transparent bg-[#D69595] text-[#F7F0F0] hover:text-rose-950 disabled:opacity-50 disabled:pointer-events-none">
+                            Save changes
+                        </button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>

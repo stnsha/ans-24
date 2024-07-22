@@ -49,20 +49,32 @@ final class ReferencesTable extends PowerGridComponent
     {
         return PowerGrid::fields()
             ->add('id')
-            ->add('parent_id')
-            ->add('description')
-            ->add('created_at');
+            ->add('parent_id', function ($reference) {
+                $category = '-';
+                $ref = References::find($reference->parent_id);
+                if (!is_null($ref)) {
+                    $category = $ref->description;
+                }
+
+                return $category;
+            })
+            ->add('description');
     }
 
     public function columns(): array
     {
         return [
-            Column::make('Parent id', 'parent_id')->searchable()->sortable(),
+            Column::make('Category', 'parent_id')
+                ->searchable()
+                ->sortable(),
+                // ->editOnClick(hasPermission: true),
             Column::make('Description', 'description')
                 ->sortable()
+                ->editOnClick(hasPermission: true)
                 ->searchable(),
 
-            Column::action('Action')
+
+            // Column::action('Action')
         ];
     }
 
@@ -71,21 +83,38 @@ final class ReferencesTable extends PowerGridComponent
         return [];
     }
 
-    #[\Livewire\Attributes\On('edit')]
-    public function edit($rowId): void
+    // #[\Livewire\Attributes\On('edit')]
+    // public function edit($rowId): void
+    // {
+    //     $this->js('alert(' . $rowId . ')');
+    // }
+
+    // public function actions(References $row): array
+    // {
+    //     return [
+    //         Button::add('edit')
+    //             ->slot('Edit')
+    //             ->class('text-xs font-normal cursor-pointer border-0 rounded-md bg-[#D69595] px-3 py-1.5 text-rose-950 hover:text-[#F7F0F0]')
+    //     ];
+    // }
+
+
+    public function onUpdatedEditable(string|int $id, string $field, string $value): void
     {
-        $this->js('alert(' . $rowId . ')');
+        // $this->validate();
+
+        References::query()->find($id)->update([
+            $field => e($value),
+        ]);
     }
 
-    public function actions(References $row): array
+    public function onUpdatedToggleable(string|int $id, string $field, string $value): void
     {
-        return [
-            Button::add('edit')
-                ->slot('Edit: ' . $row->id)
-                ->id()
-                ->class('pg-btn-white')
-                ->dispatch('edit', ['rowId' => $row->id])
-        ];
+        References::query()->find($id)->update([
+            $field => e($value),
+        ]);
+
+        $this->skipRender();
     }
 
     /*
